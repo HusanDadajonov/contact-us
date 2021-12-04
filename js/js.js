@@ -7,8 +7,9 @@ let elList = document.querySelector(".box__list");
 let elFamilyBtn = document.querySelector(".family-btn");
 let elFriendsBtn = document.querySelector(".friends-btn");
 let elClassMate = document.querySelector(".classmate-btn");
-let elAllBtn = document.querySelector(".all-btn");  
+let elAllBtn = document.querySelector(".all-btn");
 let arr = [];
+let phones = [];
 let obj = {};
 
 elForm.addEventListener("submit", send);
@@ -17,9 +18,6 @@ function createElement(element){
     elList.innerHTML = "";
     element.forEach(item =>{
         let elLi = document.createElement("li");
-        let elH3 = document.createElement("h3");
-        elH3.innerHTML = item.fullname;
-        elH3.className = "box__name";
         elLi.className = "box__item border mb-3 p-3 rounded";
         elLi.innerHTML = `<h3 class="box__name">${item.fullname}</h3><p class="box__relationShip">${item.relationship}</p><a class="box__tell btn btn-primary text-decoration-none fw-bold" href = ${item.phone}>${item.phone}</a>`;
         elList.append(elLi);
@@ -39,7 +37,7 @@ function send (e) {
             createElement(arr);
         }
     }
-    else elPhoneInp.className = "error-inp inputs inp-phone form-control";
+    else alert(`${elPhoneInp.value} nomer ro'yxatdan o'tgan`);
     elAllInputs.forEach(item => item.value = "");
 }
 
