@@ -16,10 +16,10 @@
     <form class="form pe-5 box__col col-xl-6 col-sm-12">
       <h2 class="fw-bold fs-3 text-black mb-3">New Contact</h2>
       <div class="mb-3">
-        <input type="text" class="inputs inp-name form-control" id="exampleInputEmail1" placeholder="Name and Surname" aria-describedby="emailHelp" autocomplete="off">
+        <input type="text" class="inputs inp-name form-control" id="exampleInputEmail1" placeholder="Name and Surname" aria-describedby="emailHelp" autocomplete="off" required>
       </div>
       <div class="mb-3">
-        <input type="text" list="rel-list" class="inputs inp-relationship form-control" id="exampleInputPassword1"  placeholder="RelationShip" autocomplete="off">
+        <input type="text" list="rel-list" class="inputs inp-relationship form-control" id="exampleInputPassword1"  placeholder="RelationShip" autocomplete="off" required>
         <datalist id="rel-list">
           <option>Family</option>
           <option>Friends</option>
@@ -27,7 +27,7 @@
         </datalist>
       </div>
       <div class="mb-3">
-        <input type="tell" class="inputs inp-phone form-control" id="exampleInputPassword1" placeholder="Phone" autocomplete="off">
+        <input type="tell" class="inputs inp-phone form-control" id="exampleInputPassword1" placeholder="Phone" autocomplete="off" required>
       </div>
       <button type="submit" class="btn btn-primary">Add Contact</button>
     </form>
